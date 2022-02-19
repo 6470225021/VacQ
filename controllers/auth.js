@@ -1,5 +1,4 @@
 const User = require('../models/User');
-const { use } = require('../routes/auth');
 
 //@desc     Register user
 //@route    POST /api/v1/register
