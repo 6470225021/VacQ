@@ -10,13 +10,13 @@ exports.getAppointments = async (req, res, next) => {
     if(req.user.role !== 'admin'){ //General users can see only their appointments!
         query = Appointment.find({user: req.user.id});
     } else{ //If you are an admin, you can see all appointments!
-        query = Appointment.find();
-    }
-
-    //@route    GET /api/v1/hospitals/:hospitalId/appointments
-    if(req.params.hospitalId){
-        query = query.find({hospital: req.params.hospitalId});
-    }
+        //@route    GET /api/v1/hospitals/:hospitalId/appointments
+        if(req.params.hospitalId){
+            query = Appointment.find({hospital: req.params.hospitalId});
+        }else{
+            query = Appointment.find();
+        }        
+    }    
 
     try{
         //populate is here!
