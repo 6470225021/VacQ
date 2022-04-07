@@ -99,55 +99,55 @@ const {getHospitals, getHospital, createHospital, updateHospital, deleteHospital
 /**
  * @swagger
  * /hospitals:
- *     post:
- *         summary: Create a new hospital
- *         tags: [Hospitals]
- *         requestBody:
- *             required: true
- *             content:
- *                 application/json:
- *                 schema:
- *                     $ref: '#/components/schemas/Hospital'
- *         responses:
- *             201:
- *                 description: The hospital was successfully created
- *                 content:
- *                     application/json:
- *                         schema:
- *                             $ref: '#/components/schemas/Hospital'
- *             500:
- *                 description: Some server error
+ *   post:
+ *     summary: Create a new hospital
+ *     tags: [Hospitals]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Hospital'
+ *     responses:
+ *       201:
+ *         description: The hospital was successfully created
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Hospital'
+ *       500:
+ *         description: Some server error
  */
 /**
  * @swagger
  * /hospitals/{id}:
- *     put:
- *         summary: Update the hospital by id
- *         tags: [Hospitals]
- *         parameters:
- *            -  in: path
- *               name: id
- *               schema:
- *                   type: string
- *               required: true
- *               description: The hospital id
- *         requestBody:
- *             required: true
- *             content:
- *                 application/json:
- *                 schema:
- *                     $ref: '#/components/schemas/Hospital'
- *         responses:
- *             200:
- *                 description: The hospital was updated
- *                 content:
- *                     application/json:
- *                         schema:
- *                             $ref: '#/components/schemas/Hospital'
- *             404:
- *                 description: The hospital was not found
- *             500:
- *                 description: Some error happened
+ *  put:
+ *    summary: Update the hospital by the id
+ *    tags: [Hospitals]
+ *    parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: The hospital id
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *            $ref: '#/components/schemas/Hospital'
+ *    responses:
+ *      200:
+ *        description: The hospital was updated
+ *        content:
+ *          application/json:
+ *            schema:
+ *              $ref: '#/components/schemas/Hospital'
+ *      404:
+ *        description: The hospital was not found
+ *      500:
+ *        description: Some error happened
  */
 /**
  * @swagger
