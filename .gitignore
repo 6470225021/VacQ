@@ -1,2 +1,7 @@
-node_modules/*
-#config/config.env
+# package directories
+node_modules
+jspm_packages
+.gitignore*
+
+# Serverless directories
+.serverless
