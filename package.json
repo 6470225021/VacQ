@@ -24,6 +24,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.1",
     "mysql": "^2.18.1",
+    "newman-reporter-htmlextra": "^1.22.8",
     "serverless-http": "^3.0.1",
     "swagger-jsdoc": "^6.0.0",
     "swagger-ui-express": "^4.3.0",
